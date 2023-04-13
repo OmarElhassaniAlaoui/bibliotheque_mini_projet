@@ -1,8 +1,7 @@
 <?php  
     require_once 'controller/livre_controller.php' ;
     require_once 'controller/abonne_controller.php' ;
-    require_once 'controller/emprunt_controller.php' ; 
-    // livresAction();  
+    require_once 'controller/emprunt_controller.php' ;   
     if(isset($_GET['action'])){ 
         $action = $_GET['action']; 
         switch ($action) { 
@@ -15,23 +14,23 @@
             case 'empruntPage':
                 listEmpruntAction() ;  
                 break; 
+            case 'ajouterLivre': 
+                ajouterLivreAction(); 
+                break;
+            case 'supprimerLivrePage':
+                supprimerLivreAction();
+                break;
+            case 'destroyLivre':
+                destroyLivre();
+                break;
+            case 'ajouterAbonnee':
+                ajouterAbonneAction();
+                break;
+            case 'modefierLivrePage':
+                modefierLivreAction();
+                break; 
+            
         } 
-        if(isset($_GET['action']) && $_GET['action'] =='ajouterLivre'){
-            ajouterLivreAction();
-        }
-        
-        if(isset($_GET['action']) && $_GET['action'] =='supprimerLivrePage'){
-            supprimerLivreAction();
-        }
-        
-        if(isset($_GET['action']) && $_GET['action'] =='ajouterAbonnee'){
-            ajouterAbonneAction();
-        }
-        if(isset($_GET['action']) && $_GET['action'] =='modefierLivrePage'){
-            modefierLivreAction();
-        } 
-
-
     }
 
 

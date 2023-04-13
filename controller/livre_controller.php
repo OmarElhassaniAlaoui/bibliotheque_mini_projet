@@ -11,19 +11,15 @@
         header('Location:index.php?action=livresPage');
     } ;     
     
-    function modefierLivreAction(){ 
+    function modefierLivreAction(){  
+        // $auteur = $_GET['auteur'];
         require_once 'view/livre/modefier_livre.php' ;
     } ;
-    function supprimerLivreAction(){ 
-        require_once 'view/livre/supprimer_livre.php' ; 
-        if(isset($_GET['action']) && $_GET['action'] =='supprimerLivrePage'){
-            destroyLivre(); 
-            // header('Location:index.php?action=supprimerLivrePage');
-        }
-
-        
+    function supprimerLivreAction(){    
+        $id = $_GET['id_livre'];
+        require_once 'view/livre/supprimer_livre.php' ;  
     } ; 
-    function destroyLivre(){
+    function destroyLivre(){      
         supprimerLivre();
         header('Location:index.php?action=livresPage');
     } ; 

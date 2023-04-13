@@ -11,17 +11,17 @@ function listLivre(){
 function ajouterLivre(){ 
     include './connect.php';
     $stmt = $conn->prepare("INSERT INTO livre (auteur,titre) VALUES (?,?)") ; 
-    $stmt->execute(array($_POST['Auteur'],$_POST['Titre']));        
+    return $stmt->execute(array($_POST['Auteur'],$_POST['Titre']));        
 } 
 
 function supprimerLivre(){
     include './connect.php';
     $stmt = $conn->prepare("DELETE FROM livre WHERE id_livre = ?") ; 
-    $stmt->execute(array($_GET['id_livre']));        
+    return  $stmt->execute(array($_GET['id_livre']));        
 } 
 
 function modefierLivre(){ 
     include './connect.php'; 
     $stmt = $conn->prepare("UPDATE livre SET auteur = ?, titre = ? WHERE id_livre = ?") ; 
-    $stmt->execute(array($_POST['Auteur'],$_POST['Titre'],$_GET['id_livre']));   
+    return $stmt->execute(array($_POST['Auteur'],$_POST['Titre'],$_GET['id_livre']));   
 } 
