@@ -18,11 +18,10 @@
                     <td><?= $livre->id_livre?></td>
                     <td><?= $livre->auteur?></td>
                     <td><?= $livre->titre?></td>
-                    <td><a href="#" class ="btn btn-primary" > modefier </a></td>
+                    <td><a href="index.php?action=modefierLivrePage" class ="btn btn-primary" > modefier </a></td>
                     <td><a href="index.php?action=supprimerLivrePage&id_livre=<?=$livre->id_livre?>" class = "btn btn-danger" > supprimer </a></td>
                 </tr>
-            <?php endforeach;  ?>
-           
+            <?php endforeach;  ?>   
         </tbody>
     </table> 
 

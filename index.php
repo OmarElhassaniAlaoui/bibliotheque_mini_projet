@@ -27,7 +27,10 @@
         if(isset($_GET['action']) && $_GET['action'] =='ajouterAbonnee'){
             ajouterAbonneAction();
         }
-
+        if(isset($_GET['action']) && $_GET['action'] =='modefierLivrePage'){
+            modefierLivreAction();
+        } 
+        
 
     }
 

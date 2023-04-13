@@ -11,8 +11,8 @@
         header('Location:index.php?action=livresPage');
     } ;     
     
-    function modefierLivreAction(){
-
+    function modefierLivreAction(){ 
+        require_once 'view/livre/modefier_livre.php' ;
     } ;
     function supprimerLivreAction(){ 
         require_once 'view/livre/supprimer_livre.php' ; 
@@ -25,6 +25,10 @@
     } ; 
     function destroyLivre(){
         supprimerLivre();
+        header('Location:index.php?action=livresPage');
+    } ; 
+    function updateLivre(){
+        modefierLivre();
         header('Location:index.php?action=livresPage');
     } ;
 
