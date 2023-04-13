@@ -15,11 +15,11 @@
         <tbody> 
             <?php foreach($livres as $livre): ?>
                 <tr>
-                    <td><?= $livre->id_livre ?></td>
+                    <td><?= $livre->id_livre?></td>
                     <td><?= $livre->auteur?></td>
                     <td><?= $livre->titre?></td>
                     <td><a href="#" class ="btn btn-primary" > modefier </a></td>
-                    <td><a href="#" class = "btn btn-danger" > supprimer </a></td>
+                    <td><a href="index.php?action=supprimerLivrePage&id_livre=<?=$livre->id_livre?>" class = "btn btn-danger" > supprimer </a></td>
                 </tr>
             <?php endforeach;  ?>
            
@@ -27,7 +27,7 @@
     </table> 
 
     <div class ="" > 
-    <form action="" method="post"> 
+    <form action="index.php?action=ajouterLivre" method="post"> 
         <div class="form-group">
             <label>Auteur </label>
             <input type="text" class="form-control" name="Auteur" placeholder="Auteur">

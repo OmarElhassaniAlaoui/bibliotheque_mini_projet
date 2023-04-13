@@ -12,10 +12,10 @@
             </Tr>
         </thead> 
         <tbody> 
-            <?php foreach($livres as $livre): ?>
+            <?php foreach($abonnes as $abonne): ?>
                 <tr>
-                    <td><?= $livre->id_abonne ?></td>
-                    <td><?= $livre->prenom?></td>
+                    <td><?= $abonne->id_abonne ?></td>
+                    <td><?= $abonne->prenom?></td>
                     <td><a href="#" class ="btn btn-primary" > modefier </a></td>
                     <td><a href="#" class = "btn btn-danger" > supprimer </a></td>
                 </tr>
@@ -24,7 +24,7 @@
         </tbody>
     </table> 
     <div class ="" > 
-    <form action="" method="post"> 
+    <form action="index.php?action=ajouterAbonnee" method="post"> 
         <div class="form-group">
             <label>Prenom </label>
             <input type="text" class="form-control" name="prenom" placeholder="prenom">
