@@ -1,7 +1,7 @@
 <?php  
     require_once 'controller/livre_controller.php' ;
     require_once 'controller/abonne_controller.php' ;
-    require_once 'controller/eumprint_controller.php' ;
+    require_once 'controller/emprunt_controller.php' ; 
     // livresAction();  
     if(isset($_GET['action'])){ 
         $action = $_GET['action']; 
@@ -12,8 +12,8 @@
             case 'abonnePage': 
                 listAbonneAction(); 
                 break; 
-            case 'eumprintPage':
-                listEumprintAction() ;  
+            case 'empruntPage':
+                listEmpruntAction() ;  
                 break; 
         } 
         if(isset($_GET['action']) && $_GET['action'] =='ajouterLivre'){
@@ -30,7 +30,7 @@
         if(isset($_GET['action']) && $_GET['action'] =='modefierLivrePage'){
             modefierLivreAction();
         } 
-        
+
 
     }
 

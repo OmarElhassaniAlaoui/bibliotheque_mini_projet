@@ -7,7 +7,7 @@
             <a href="index.php?action=livresPage" class="nav-link">Livre</a>
         </li>
         <li class="nav-item nav-link">
-            <a href="index.php?action=eumprintPage" class="nav-link">Eumprint</a>
+            <a href="index.php?action=empruntPage" class="nav-link">Emprunt</a>
         </li>
     </div>
 </nav>

@@ -1,5 +1,5 @@
 <?php 
-    $title  = "liste des Eumprints" ;  
+    $title  = "liste des Emprunts" ;  
     ob_start() ;
 ?>    
  <table class="table table-striped"> 
