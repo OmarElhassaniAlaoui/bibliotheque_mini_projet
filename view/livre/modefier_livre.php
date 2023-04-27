@@ -4,7 +4,7 @@
 ?>    
 
     <div class ="" > 
-        <p>vous voulez modefier le livre : <?=$titre =$_GET['titre'] ?><?=$auteur?> </p>
+        <p>vous voulez modefier le livre : <?=$titre =$_GET['titre'] ?> <?=$auteur?></p>
         <form action="index.php?action=livresPage" method="post"> 
             <div class="form-group">
                 <label> </label>

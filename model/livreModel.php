@@ -1,6 +1,5 @@
 <?php 
 
-
 function listLivre(){   
     include './connect.php';
     $stmt = $conn->query("SELECT * FROM livre") ; 
