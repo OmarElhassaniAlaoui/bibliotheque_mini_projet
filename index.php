@@ -8,27 +8,46 @@
             case 'livresPage': 
                 livresAction(); 
                 break; 
-            case 'abonnePage': 
-                listAbonneAction(); 
-                break; 
-            case 'empruntPage':
-                listEmpruntAction() ;  
-                break; 
             case 'ajouterLivre': 
-                ajouterLivreAction(); 
-                break;
+                 ajouterLivreAction(); 
+                break; 
             case 'supprimerLivrePage':
                 supprimerLivreAction();
                 break;
             case 'destroyLivre':
                 destroyLivre();
-                break;
-            case 'ajouterAbonnee':
-                ajouterAbonneAction();
-                break;
+                break; 
             case 'modefierLivrePage':
                 modefierLivreAction();
                 break; 
+//.. all about livre  
+            case 'abonnePage': 
+                listAbonneAction(); 
+                break;  
+            case 'ajouterAbonnee':
+                ajouterAbonneAction();
+                break; 
+// all about emprunt ...
+            case 'empruntPage':
+                listEmpruntAction() ;  
+                break;   
+            case 'ajouterEmpruntPage':
+                // ajouterEmpruntAction();
+                break;
+            case 'supprimerEmpruntPage':
+                supprimerEmpruntAction();
+                break; 
+            case 'modefierEmpruntPage':
+                // modefierEmpruntAction();
+                break; 
+            case 'destroyEmprunt':
+                destroyEmprunt();
+                break;
+            
+            
+            
+            
+           
             
         } 
     }

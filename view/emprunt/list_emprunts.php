@@ -22,8 +22,8 @@
                     <td><?= $eumprint->id_abonne?></td>
                     <td><?= $eumprint->date_sortie?></td>
                     <td><?= $eumprint->date_rendu?></td>
-                    <td><a href="#" class ="btn btn-primary" > modefier </a></td>
-                    <td><a href="#" class = "btn btn-danger" > supprimer </a></td>
+                    <td><a href="index.php?action= " class ="btn btn-primary" > modefier </a></td>
+                    <td><a href="index.php?action=supprimerEmpruntPage&id_emprunt=<?=$eumprint->id_emprunt?>" class = "btn btn-danger" > supprimer </a></td>
                 </tr>
             <?php endforeach;  ?>
            
@@ -33,21 +33,17 @@
     <div class ="" > 
     <form action="" method="post"> 
         <div class ="container ">
-           
             <label>Abonnee </label>
-            
               <select class="form-select" aria-label="Default">  
                 <?php
                    require_once 'controller/abonne_controller.php' ;
+                     $abonnes = listAbonne();
                     foreach($abonnes as $abonne) {
                         echo "<option value='$abonne->id_abonne'>$abonne->id_abonne-$abonne->prenom</option>";
                     }
-                 ?>               
-              </select> 
-            
+                ?>               
+              </select>        
         </div>
-    
-
         <div class="form-group">
             <label>Auteur </label>
             <input type="text" class="form-control" name="Auteur" placeholder="Auteur">
