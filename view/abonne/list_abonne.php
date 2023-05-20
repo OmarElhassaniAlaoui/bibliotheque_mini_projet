@@ -16,8 +16,8 @@
                 <tr>
                     <td><?= $abonne->id_abonne ?></td>
                     <td><?= $abonne->prenom?></td>
-                    <td><a href="#" class ="btn btn-primary" > modefier </a></td>
-                    <td><a href="#" class = "btn btn-danger" > supprimer </a></td>
+                    <td><a href=" index.php?action=modefierAbonnePage&id_abonne=<?=$abonne->id_abonne?>" class ="btn btn-primary" > modefier </a></td>
+                    <td><a href="index.php?action=supprimerAbonnePage&id_abonne=<?=$abonne->id_abonne?>" class = "btn btn-danger" > supprimer </a></td>
                 </tr>
             <?php endforeach;  ?>
            

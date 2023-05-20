@@ -13,6 +13,8 @@
     
    
     function modefierLivreAction(){  
+        $id = $_GET['id_livre'];
+        $livres = view($id);
         require_once 'view/livre/modefier_livre.php' ;
     } ;
     // had l function li kat-siftna l'apage dyal supprission livre
@@ -26,7 +28,10 @@
         header('Location:index.php?action=livresPage');
     } ; 
     function updateLivre(){
-        modefierLivre();
+        $id_livre = $_POST['id_livre'];
+        $auteur = $_POST['Auteur'];
+        $titre = $_POST['Titre'];
+        modefierLivre($auteur,$titre,$id_livre);
         header('Location:index.php?action=livresPage');
     } ;
 

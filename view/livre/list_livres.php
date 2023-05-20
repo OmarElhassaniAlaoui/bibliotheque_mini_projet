@@ -18,7 +18,7 @@
                     <td><?= $livre->id_livre?></td>
                     <td><?= $livre->auteur?></td>
                     <td><?= $livre->titre?></td>
-                    <td><a href="index.php?action=modefierLivrePage&titre=<?=$livre->titre ?>&<?=$livre->auteur?> " class ="btn btn-primary" > modefier </a></td>
+                    <td><a href="index.php?action=modefierLivrePage&id_livre=<?= $livre->id_livre ?>" class ="btn btn-primary" > modefier </a></td>
                     <td><a href="index.php?action=supprimerLivrePage&id_livre=<?=$livre->id_livre?>" class = "btn btn-danger" > supprimer </a></td>
                 </tr>
             <?php endforeach;  ?>   

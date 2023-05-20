@@ -19,7 +19,11 @@
                 break; 
             case 'modefierLivrePage':
                 modefierLivreAction();
-                break; 
+                break;  
+            case 'updateLivre':
+                updateLivre();
+                break;
+            
 //.. all about livre  
             case 'abonnePage': 
                 listAbonneAction(); 
@@ -27,6 +31,20 @@
             case 'ajouterAbonnee':
                 ajouterAbonneAction();
                 break; 
+            case 'supprimerAbonnePage':
+                supprimerAbonneAction();
+                break;
+            case 'destroyAbonne':
+                destroyAbonne();
+                break;
+            case 'modefierAbonnePage':
+                modefierAbonneAction();
+                break;
+            case 'modefierAbonne':
+                modefierAbonnes();
+                break;
+            
+            
 // all about emprunt ...
             case 'empruntPage':
                 listEmpruntAction() ;  
@@ -43,9 +61,6 @@
             case 'destroyEmprunt':
                 destroyEmprunt();
                 break;
-            
-            
-            
             
            
             
