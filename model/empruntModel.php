@@ -15,4 +15,10 @@
         $stmt = $conn->query("DELETE FROM emprunt WHERE id_emprunt = ?") ;
         return $stmt->execute(array($_GET['id_emprunt']));
     } 
-    // 
+    // ajouter un emprunt 
+    function ajouterEmprunt($id_livre,$id_abonne,$date_sortie,$date_rendu){
+        include './connect.php';
+        $stmt = $conn->prepare("INSERT INTO emprunt(id_livre,id_abonne,date_sortie,date_rendu) VALUES (?,?,?,?)") ; 
+        return $stmt->execute([$id_livre,$id_abonne,$date_sortie,$date_rendu]);        
+    } 
+    

@@ -16,16 +16,16 @@
         supprimerAbonne($id);
         header('Location:index.php?action=abonnePage');
     };
-    function modefierAbonneAction(){
+    function modifierAbonneAction(){
         $id = $_GET['id_abonne'];
         $abonnes = viewAbonne($id);
-        require_once 'view/abonne/modefier_abonne.php';
+        require_once 'view/abonne/modifier_abonne.php';
     };
-    function modefierAbonnes(){
+    function modifierAbonnes(){
         $id = $_POST['id_abonne'];
         $prenom = $_POST['prenom']; 
         var_dump($_POST); 
-        modefierAbonne($prenom,$id);
+        modifierAbonne($prenom,$id);
         header('Location:index.php?action=abonnePage');
     };
 

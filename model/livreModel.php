@@ -19,7 +19,7 @@ function supprimerLivre(){
     return  $stmt->execute(array($_GET['id_livre']));        
 } 
 
-function modefierLivre($auteur,$titre,$id_livre){ 
+function modifierLivre($auteur,$titre,$id_livre){ 
     include './connect.php'; 
     $stmt = $conn->prepare("UPDATE livre SET auteur = ?, titre = ? WHERE id_livre = ?") ; 
     return $stmt->execute([$auteur,$titre,$id_livre]);   

@@ -10,7 +10,7 @@
                 <th>id_abonne</th>
                 <th>date_sortie	</th>
                 <th>date_rendu</th>
-                <th>modefication</th>
+                <th>modification</th>
                 <th>suppression</th>
             </Tr>
         </thead> 
@@ -22,35 +22,45 @@
                     <td><?= $eumprint->id_abonne?></td>
                     <td><?= $eumprint->date_sortie?></td>
                     <td><?= $eumprint->date_rendu?></td>
-                    <td><a href="index.php?action= " class ="btn btn-primary" > modefier </a></td>
+                    <td><a href="index.php?action=modifierEmpruntPage " class ="btn btn-primary" > modifier </a></td>
                     <td><a href="index.php?action=supprimerEmpruntPage&id_emprunt=<?=$eumprint->id_emprunt?>" class = "btn btn-danger" > supprimer </a></td>
                 </tr>
-            <?php endforeach;  ?>
+            <?php endforeach; ?>
            
         </tbody>
     </table> 
 
     <div class ="" > 
-    <form action="" method="post"> 
+    <form action="index.php?action=ajouterEmprunt" method="post"> 
         <div class ="container ">
             <label>Abonnee </label>
-              <select class="form-select" aria-label="Default">  
+              <select name="id_abonne" class="form-select" aria-label="Default">  
                 <?php
-                   require_once 'controller/abonne_controller.php' ;
-                     $abonnes = listAbonne();
                     foreach($abonnes as $abonne) {
-                        echo "<option value='$abonne->id_abonne'>$abonne->id_abonne-$abonne->prenom</option>";
+                        echo "<option value='$abonne->id_abonne' >$abonne->id_abonne-$abonne->prenom</option>";
                     }
                 ?>               
               </select>        
         </div>
+
+        <div class ="container-list-livre ">
+            <label>Livre</label>
+              <select name="id_livre" class="form-select" aria-label="Default">  
+                <?php
+                    foreach($livres as $livre) {
+                        echo "<option value='$livre->id_livre'>$livre->auteur | $livre->titre</option>";
+                    }
+                ?>               
+              </select>        
+        </div>
+
         <div class="form-group">
-            <label>Auteur </label>
-            <input type="text" class="form-control" name="Auteur" placeholder="Auteur">
+            <label>Date Sortie </label>
+            <input type="date" class="form-control" name="date_sortie" >
         </div>
         <div class="form-group">
-            <label>Titre</label>
-            <input  type="text" class="form-control" name="Titre" placeholder="titre">
+            <label>Date Rendu </label>
+            <input  type="date" class="form-control" name="date_rendu" >
         </div> 
         <div class="form-group">
             <input type="submit" class="btn btn-success my-2" value="Ajouter" name="ajouter">

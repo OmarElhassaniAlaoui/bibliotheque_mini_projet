@@ -18,7 +18,7 @@ function supprimerAbonne($id){
     return $stmt->execute(array($id));        
 }
 
-function modefierAbonne($prenom,$id_abonne){ 
+function modifierAbonne($prenom,$id_abonne){ 
     include './connect.php'; 
     $stmt = $conn->prepare("UPDATE abonne SET prenom = ? WHERE id_abonne = ?") ; 
     return $stmt->execute([$prenom,$id_abonne]);   

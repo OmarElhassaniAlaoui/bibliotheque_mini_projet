@@ -8,7 +8,7 @@
                 <th>id_livre</th>
                 <th>autheur</th>
                 <th>titre</th>
-                <th>modefication</th>
+                <th>modification</th>
                 <th>suppression</th>
             </Tr>
         </thead> 
@@ -18,7 +18,7 @@
                     <td><?= $livre->id_livre?></td>
                     <td><?= $livre->auteur?></td>
                     <td><?= $livre->titre?></td>
-                    <td><a href="index.php?action=modefierLivrePage&id_livre=<?= $livre->id_livre ?>" class ="btn btn-primary" > modefier </a></td>
+                    <td><a href="index.php?action=modifierLivrePage&id_livre=<?= $livre->id_livre ?>" class ="btn btn-primary" > modifier </a></td>
                     <td><a href="index.php?action=supprimerLivrePage&id_livre=<?=$livre->id_livre?>" class = "btn btn-danger" > supprimer </a></td>
                 </tr>
             <?php endforeach;  ?>   

@@ -12,10 +12,10 @@
     } ;     
     
    
-    function modefierLivreAction(){  
+    function modifierLivreAction(){  
         $id = $_GET['id_livre'];
         $livres = view($id);
-        require_once 'view/livre/modefier_livre.php' ;
+        require_once 'view/livre/modifier_livre.php' ;
     } ;
     // had l function li kat-siftna l'apage dyal supprission livre
     function supprimerLivreAction(){    
@@ -23,7 +23,8 @@
         require_once 'view/livre/supprimer_livre.php' ;  
     } ; 
     /*had l function li ltahet hiya lli kat-supprimer livre  */
-    function destroyLivre(){      
+    function destroyLivre(){    
+
         supprimerLivre();
         header('Location:index.php?action=livresPage');
     } ; 
@@ -31,7 +32,7 @@
         $id_livre = $_POST['id_livre'];
         $auteur = $_POST['Auteur'];
         $titre = $_POST['Titre'];
-        modefierLivre($auteur,$titre,$id_livre);
+        modifierLivre($auteur,$titre,$id_livre);
         header('Location:index.php?action=livresPage');
     } ;
 

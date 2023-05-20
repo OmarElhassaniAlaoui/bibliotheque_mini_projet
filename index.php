@@ -17,8 +17,8 @@
             case 'destroyLivre':
                 destroyLivre();
                 break; 
-            case 'modefierLivrePage':
-                modefierLivreAction();
+            case 'modifierLivrePage':
+                modifierLivreAction();
                 break;  
             case 'updateLivre':
                 updateLivre();
@@ -37,11 +37,11 @@
             case 'destroyAbonne':
                 destroyAbonne();
                 break;
-            case 'modefierAbonnePage':
-                modefierAbonneAction();
+            case 'modifierAbonnePage':
+                modifierAbonneAction();
                 break;
-            case 'modefierAbonne':
-                modefierAbonnes();
+            case 'modifierAbonne':
+                modifierAbonnes();
                 break;
             
             
@@ -49,14 +49,14 @@
             case 'empruntPage':
                 listEmpruntAction() ;  
                 break;   
-            case 'ajouterEmpruntPage':
-                // ajouterEmpruntAction();
+            case 'ajouterEmprunt':
+                ajouterEmpruntAction();
                 break;
             case 'supprimerEmpruntPage':
                 supprimerEmpruntAction();
                 break; 
-            case 'modefierEmpruntPage':
-                // modefierEmpruntAction();
+            case 'modifierEmpruntPage':
+                modifierEmpruntAction();
                 break; 
             case 'destroyEmprunt':
                 destroyEmprunt();
