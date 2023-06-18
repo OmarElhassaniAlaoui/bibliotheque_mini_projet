@@ -21,25 +21,38 @@
         $id = $_GET['id_emprunt'];
         require_once 'view/emprunt/supprimer_eumprint.php' ;
     } ; 
-    function modifierEmpruntAction(){ 
+    
+    function destroyEmprunt(){
+        $id = $_GET['id_emprunt'];
+        supprimerEmprunt($id);
+        header('Location:index.php?action=empruntPage'); 
+    }  
+
+    // modifier emprunt 
+    function modifierEmpruntAction(){
+        $id = $_GET['id_emprunt'];
+        // $listAbonne = listAbonne();
+        // $listLivre = listLivre();
+        // $eumprints = listEumprint();
+        $emprunts = viewEmprunt($id);
         require_once 'view/emprunt/modifier_emprunt.php' ;
     } ;
-    // supprimer emprunt 
-    function destroyEmprunt(){
-        supprimerEmprunt();
-        header('Location:index.php?action=empruntPage'); 
-    } 
-    // modifier emprunt 
-    // function modifierEmpruntAction(){
-    //     $id = $_GET['id_emprunt'];
-    //     $eumprints = viewEmprunt($id);
-    //     require_once 'view/emprunt/modifier_emprunt.php' ;
-    // } ;
     // update emprunt 
-    // function updateEmprunt(){
-    //     modifierEmprunt();
-    //     header('Location:index.php?action=empruntPage');
-    // } ;
+    function updateEmprunt(){
+        $id_emprunt = $_POST['id_emprunt'];
+        $id_livre = $_POST['id_livre'];
+        $id_abonne = $_POST['id_abonne'];
+        $date_sortie = $_POST['date_sortie'];
+        $date_rendu = $_POST['date_rendu'];
+        modifierEmprunt(
+            $id_emprunt,
+            $id_livre,
+            $id_abonne,
+            $date_sortie,
+            $date_rendu
+          );
+        header('Location:index.php?action=empruntPage');
+    } ;
         
    
 

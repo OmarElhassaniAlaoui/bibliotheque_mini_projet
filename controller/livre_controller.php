@@ -24,7 +24,6 @@
     } ; 
     /*had l function li ltahet hiya lli kat-supprimer livre  */
     function destroyLivre(){    
-
         supprimerLivre();
         header('Location:index.php?action=livresPage');
     } ; 
@@ -34,7 +33,8 @@
         $titre = $_POST['Titre'];
         modifierLivre($auteur,$titre,$id_livre);
         header('Location:index.php?action=livresPage');
-    } ;
+    };
+    
 
     
 ?> 

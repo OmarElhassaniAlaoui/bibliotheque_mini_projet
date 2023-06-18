@@ -1,6 +1,6 @@
 <?php 
  require_once 'model/abonneModel.php' ; 
- function  listAbonneAction () { 
+ function listAbonneAction () { 
      $abonnes = listAbonne(); 
      require_once 'view/abonne/list_abonne.php' ; 
  } 

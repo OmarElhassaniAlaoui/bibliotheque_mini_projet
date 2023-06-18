@@ -22,7 +22,7 @@
                     <td><?= $eumprint->id_abonne?></td>
                     <td><?= $eumprint->date_sortie?></td>
                     <td><?= $eumprint->date_rendu?></td>
-                    <td><a href="index.php?action=modifierEmpruntPage " class ="btn btn-primary" > modifier </a></td>
+                    <td><a href="index.php?action=modifierEmpruntPage&id_emprunt=<?=$eumprint->id_emprunt?>" class ="btn btn-primary" > modifier </a></td>
                     <td><a href="index.php?action=supprimerEmpruntPage&id_emprunt=<?=$eumprint->id_emprunt?>" class = "btn btn-danger" > supprimer </a></td>
                 </tr>
             <?php endforeach; ?>

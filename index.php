@@ -1,7 +1,7 @@
 <?php  
     require_once 'controller/livre_controller.php' ;
     require_once 'controller/abonne_controller.php' ;
-    require_once 'controller/emprunt_controller.php' ;   
+    require_once 'controller/emprunt_controller.php';   
     if(isset($_GET['action'])){ 
         $action = $_GET['action']; 
         switch ($action) { 
@@ -58,12 +58,12 @@
             case 'modifierEmpruntPage':
                 modifierEmpruntAction();
                 break; 
+            case 'updateEmprunt':
+                updateEmprunt();
+                break;
             case 'destroyEmprunt':
                 destroyEmprunt();
-                break;
-            
-           
-            
+                break;    
         } 
     }
 
